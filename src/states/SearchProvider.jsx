@@ -3,7 +3,7 @@ import { useState, createContext, useContext } from 'react'
 const SearchContext = createContext()
 
 export function useSearchContext() {
-  useContext(SearchContext)
+  return useContext(SearchContext)
 }
 
 function SearchProvider(props) {
