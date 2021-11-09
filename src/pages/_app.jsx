@@ -4,7 +4,7 @@ const GlobalStyle = createGlobalStyle`
   html,
   body {
     background-color: #2F2E30;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }
 
@@ -22,7 +22,9 @@ const GlobalStyle = createGlobalStyle`
 
 const theme = {
   colors: {
-    primary: "#2F2E30",
+    dark: '#2f2f2f',
+    light: '#fff',
+    brand: '#57bd84'
   },
 };
 
