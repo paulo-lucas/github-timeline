@@ -6,11 +6,11 @@ const GlobalStyle = createGlobalStyle`
     background-color: #2F2E30;
     font-family: Lato, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
+    display: flex; 
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center; 
+    min-height: 100vh;
   }
 
   * {
