@@ -1,4 +1,5 @@
 import SearchProvider from "states/SearchProvider"
+import Header from "components/Header"
 import Search from "components/Search"
 import Timeline from "components/Timeline"
 
@@ -9,6 +10,7 @@ export default function Home() {
   return (
     <SearchProvider>
       <Container>
+        <Header />
         <Search />
         <Timeline />
       </Container>
