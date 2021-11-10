@@ -52,6 +52,7 @@ const Form = styled.form`
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   background-color: #37474f;
+  max-width: 90vw;
   width: ${props => (props.barOpened ? "20rem" : "2rem")};
   cursor: ${props => (props.barOpened ? "auto" : "pointer")};
   padding: 2rem;
