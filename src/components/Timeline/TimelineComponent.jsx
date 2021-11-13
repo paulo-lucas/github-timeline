@@ -2,29 +2,11 @@ import styled from 'styled-components'
 
 import Item from './Item'
 
-const data = [
-  {
-    'name': 'freelancer',
-    'desc': 'y current employment. Way better than the position before!',
-    'date': '2013-present'
-  },
-  {
-    'name': 'freelancer',
-    'desc': 'y current employment. Way better than the position before!',
-    'date': '2013-present'
-  },
-  {
-    'name': 'freelancer',
-    'desc': 'y current employment. Way better than the position before!',
-    'date': '2013-present'
-  }
-]
-
-const Timeline = () => {
+const Timeline = ({ data }) => {
   return <StyledTimeline>
     {data.map((item, idx) => <Item
-      key={idx}
-      direction={idx%2 === 0 ? 'right' : 'left'}
+      key={item.id}
+      direction={idx % 2 === 0 ? 'right' : 'left'}
       {...item}
     />)}
   </StyledTimeline>

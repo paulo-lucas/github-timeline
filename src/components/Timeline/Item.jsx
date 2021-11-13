@@ -1,13 +1,15 @@
 import styled from "styled-components"
 
-function Item({ name, desc, date, direction }) {
+function Item({ name, desc, createdAt, direction }) {
+  const formatDate = date => date.split('T')[0]
+
   return <StyledItem>
     <Positioner className={direction}>
       <FlagWrapper>
         <Flag>{name}</Flag>
-        <TimeWrapper><Time>{date}</Time></TimeWrapper>
+        <TimeWrapper><Time>{formatDate(createdAt)}</Time></TimeWrapper>
       </FlagWrapper>
-      <Description>{desc}</Description>
+      <Description>{desc || "No description"}</Description>
     </Positioner>
   </StyledItem>
 }
