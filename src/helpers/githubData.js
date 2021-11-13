@@ -17,6 +17,7 @@ export function getTimelineData(user, repos) {
   }))
   
   return {
+    username: user.login,
     user: cleanUser,
     repos: cleanRepos
   }
