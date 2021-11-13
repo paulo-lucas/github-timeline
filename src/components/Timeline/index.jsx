@@ -15,8 +15,8 @@ const Timeline = () => {
       return setData({ username: "" })
 
     await fetch(`/api/user/${search}`)
-      .then(res => res.json()) 
-      .then(res => { setData(res); console.log(res) })
+      .then(res => res.json())
+      .then(res => setData(res))
       .catch(err => setData({ error: 'Something went wrong', username: search }))
   }
 
