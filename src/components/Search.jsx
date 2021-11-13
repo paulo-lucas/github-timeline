@@ -13,7 +13,7 @@ const Search = () => {
 
   const updateSearch = e => setSearch(e.target?.value)
 
-  const debouncedOnChange = debounce(updateSearch, 200)
+  const debouncedOnChange = debounce(updateSearch, 500)
 
   return <Form
     barOpened={barOpened}
