@@ -15,10 +15,21 @@ export function getTimelineData(user, repos) {
     homepage: item.homepage,
     createdAt: item.created_at
   }))
-  
+
   return {
     username: user.login,
     user: cleanUser,
     repos: cleanRepos
   }
+}
+
+const compareRepos = (a, b) => {
+  const a_value = new Date(a.createdAt).getTime()
+  const b_value = new Date(b.createdAt).getTime()
+
+  return a_value - b_value
+}
+
+export function sortReposByDate(data) {
+  return data.sort(compareRepos)
 }

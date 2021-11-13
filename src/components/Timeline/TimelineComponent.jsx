@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-
+import { sortReposByDate } from 'helpers/githubData'
 import Item from './Item'
 
 const Timeline = ({ data }) => {
   return <StyledTimeline>
-    {data.map((item, idx) => <Item
+    {sortReposByDate(data).map((item, idx) => <Item
       key={item.id}
       direction={idx % 2 === 0 ? 'right' : 'left'}
       {...item}
