@@ -4,11 +4,13 @@ import Search from "components/Search"
 import Timeline from "components/Timeline"
 
 import styled from "styled-components"
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const { query } = useRouter()
 
   return (
-    <SearchProvider>
+    <SearchProvider user={query.user} >
       <Container>
         <Header />
         <Search />

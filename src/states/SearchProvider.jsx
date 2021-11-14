@@ -1,4 +1,4 @@
-import { useState, createContext, useContext } from 'react'
+import { useState, useEffect, createContext, useContext } from 'react'
 
 const SearchContext = createContext()
 
@@ -9,6 +9,8 @@ export function useSearchContext() {
 function SearchProvider(props) {
   const [search, setSearch] = useState('')
   const data = { search, setSearch }
+
+  useEffect(() => props.user && setSearch(props.user), [props.user])
 
   return <SearchContext.Provider value={data} {...props} />
 }
