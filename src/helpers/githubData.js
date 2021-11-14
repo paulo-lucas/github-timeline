@@ -11,7 +11,7 @@ export function getTimelineData(user, repos) {
     id: item.id,
     name: item.name,
     desc: item.description,
-    url: item.url,
+    url: item.html_url,
     homepage: item.homepage,
     createdAt: item.created_at
   }))

@@ -1,10 +1,10 @@
 import styled from "styled-components"
 
-function Item({ name, desc, createdAt, direction }) {
+function Item({ name, desc, createdAt, direction, homepage, url }) {
   const formatDate = date => date.split('T')[0]
 
   return <StyledItem>
-    <Positioner className={direction}>
+    <Positioner className={direction} onClick={() => window.open(homepage || url)}>
       <FlagWrapper>
         <Flag>{name}</Flag>
         <TimeWrapper><Time>{formatDate(createdAt)}</Time></TimeWrapper>
@@ -154,6 +154,7 @@ const Description = styled.div`
 const Positioner = styled.div`
   position: relative;
   width: 300px;
+  cursor: pointer;
 
   &.left {
     float: left;
