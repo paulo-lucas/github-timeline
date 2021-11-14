@@ -1,4 +1,5 @@
-import { createGlobalStyle } from "styled-components";
+import Head from "next/head"
+import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
   html,
@@ -17,6 +18,10 @@ const GlobalStyle = createGlobalStyle`
 
 function App({ Component, pageProps }) {
   return <>
+    <Head>
+      <title>Github Timeline by Paulo Lucas</title>
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    </Head>
     <GlobalStyle />
     <Component {...pageProps} />
   </>
